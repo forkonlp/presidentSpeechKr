@@ -1,0 +1,20 @@
+Package: presidentSpeechKr
+Type: Package
+Title: Korean President's Speech Text
+Version: 0.1.0
+Authors@R: c(
+    person("ChanYub", "Park", , "mrchypark@gmail.com", c("aut", "cre"))
+    )
+Description: Korean president's speech text data from http://www.pa.go.kr/research/contents/speech/index.jsp.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 2.10)
+Imports:
+    tibble
+Suggests:
+    dplyr
+URL: http://github.com/mrchypark/presidentSpeechKr
+BugReports: https://github.com/mrchypark/presidentSpeechKr/issues
+RoxygenNote: 6.0.1
