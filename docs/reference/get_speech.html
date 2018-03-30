@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • presidentSpeechKr</title>
+<title>get speach — get_speech • presidentSpeechKr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -25,7 +25,11 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="get speach — get_speech" />
+
+<meta property="og:description" content="search_speech에서 얻은 주소:link를 기준으로 연설문을 가져옵니다.
+한번에 한 주소만 가져올 수 있습니다." />
+<meta name="twitter:card" content="summary" />
 
 
 <!-- mathjax -->
@@ -42,7 +46,7 @@
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -93,29 +97,50 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
-      <small>Source: <a href='http://github.com/forkonlp/presidentSpeechKr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>get speach</h1>
+    <small>Source: <a href='http://github.com/forkonlp/presidentSpeechKr/blob/master/R/get_speech.R'><code>R/get_speech.R</code></a></small>
     </div>
 
-    <div id="presidentspeechkr-0-1-0" class="section level1">
-<h1 class="page-header">
-<a href="#presidentspeechkr-0-1-0" class="anchor"></a>presidentSpeechKr 0.1.0</h1>
-<ul>
-<li>
-<code>http://www.pa.go.kr/research/contents/speech/index.jsp</code>의 내용을 가져옵니다.</li>
-</ul>
-</div>
-  </div>
+    
+    <p><code><a href='search_speech.html'>search_speech</a></code>에서 얻은 주소:link를 기준으로 연설문을 가져옵니다.
+한번에 한 주소만 가져올 수 있습니다.</p>
+    
 
+    <pre class="usage"><span class='fu'>get_speech</span>(<span class='no'>link</span>, <span class='kw'>paragraph</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>link</th>
+      <td><p>게시글의 url 주소입니다. 한 번에 한 주소만 가능합니다.
+<a href='http://www.pa.go.kr/research/contents/speech/index.jsp?spMode=view&amp;catid=c_pa02062&amp;artid=1310475'>http://www.pa.go.kr/research/contents/speech/index.jsp?spMode=view&amp;catid=c_pa02062&amp;artid=1310475</a>
+와 같이 생겼습니다.
+character를 입력으로 받습니다.</p></td>
+    </tr>
+    <tr>
+      <th>paragraph</th>
+      <td><p>문단 단위로 분리할지 말지를 정합니다.
+기본값은 FALSE 입니다.
+logical 을 입력으로 받습니다.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>tibble 자료형으로 key, value 의 2개 컬럼을 가집니다.</p>
+    
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#presidentspeechkr-0-1-0">0.1.0</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+          </ul>
 
+  </div>
 </div>
 
       <footer>

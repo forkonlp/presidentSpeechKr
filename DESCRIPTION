@@ -15,6 +15,6 @@ Imports:
     xml2,
     rvest,
     tibble
-URL: http://github.com/mrchypark/presidentSpeechKr
-BugReports: https://github.com/mrchypark/presidentSpeechKr/issues
+URL: http://github.com/forkonlp/presidentSpeechKr
+BugReports: https://github.com/forkonlp/presidentSpeechKr/issues
 RoxygenNote: 6.0.1
