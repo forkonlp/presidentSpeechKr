@@ -11,14 +11,14 @@
 #'                    numeric을 입력으로 받습니다.
 #' @param count 총 몇 개의 기록을 가져올지 정합니다. 기본값은 전체이며,
 #'              numeric을 입력을 받습니다.
-#' @param damPst 검색하고자 하는 대통령을 지정합니다. 기본값은 전체를 검색합니다.
-#'                  \code{\link{get_options}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
+#' @param president 검색하고자 하는 대통령을 지정합니다. 기본값은 전체를 검색합니다.
+#'                  \code{\link{get_president}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
 #'                  character를 입력으로 받습니다.
 #' @param field 검색하고자 하는 분야를 지정합니다. 기본값은 전체를 검색합니다.
-#'              \code{\link{get_options}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
+#'              \code{\link{get_field}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
 #'              character를 입력으로 받습니다.
 #' @param event 검색하고자 하는 유형을 지정합니다. 기본값은 전체를 검색합니다.
-#'              \code{\link{get_options}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
+#'              \code{\link{get_event}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
 #'              character를 입력으로 받습니다.
 #' @param order 검색 결과의 순서를 정합니다. 기본값은 연설문일자순 입니다.
 #'              연설문일자순:1, 제목순:2 입니다.
@@ -42,7 +42,7 @@
 search_speech <- function(keyword = "",
                           searchField = 0,
                           count = 90000,
-                          damPst = "",
+                          president = "",
                           field = "",
                           event = "",
                           order = 1) {
@@ -57,8 +57,8 @@ search_speech <- function(keyword = "",
       order,
       "&pageIndex=1",
       "&searchHistoryCount=0",
-      "&damPst=",
-      damPst,
+      "&president=",
+      president,
       "&speechField=",
       field,
       "&speechEvent=",
@@ -72,7 +72,7 @@ search_speech <- function(keyword = "",
   
   res <-
     tibble(
-      damPst = "",
+      president = "",
       field = "",
       event = "",
       title = "",
@@ -88,7 +88,7 @@ search_speech <- function(keyword = "",
   dat <- rvest::html_text(dat)
   
   if (length(dat) > 6) {
-    damPst <- dat[seq(from = 2,
+    president <- dat[seq(from = 2,
                       to = length(dat),
                       by = 6)]
     field <- dat[seq(from = 3,
@@ -108,7 +108,7 @@ search_speech <- function(keyword = "",
     link <- rvest::html_attr(link, "href")
     link <- paste0(root, link)
     
-    res <- tibble(damPst, field, event, title, date, link)
+    res <- tibble(president, field, event, title, date, link)
   }
   return(res)
 }

@@ -4,8 +4,8 @@
 \alias{search_speech}
 \title{search speech}
 \usage{
-search_speech(keyword = "", searchField = 0, count = 90000, damPst = "",
-  field = "", event = "", order = 1)
+search_speech(keyword = "", searchField = 0, count = 90000,
+  president = "", field = "", event = "", order = 1)
 }
 \arguments{
 \item{keyword}{검색어를 입력합니다. 기본값은 전체를 검색합니다.
@@ -18,16 +18,16 @@ numeric을 입력으로 받습니다.}
 \item{count}{총 몇 개의 기록을 가져올지 정합니다. 기본값은 전체이며,
 numeric을 입력을 받습니다.}
 
-\item{damPst}{검색하고자 하는 대통령을 지정합니다. 기본값은 전체를 검색합니다.
-\code{\link{get_options}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
+\item{president}{검색하고자 하는 대통령을 지정합니다. 기본값은 전체를 검색합니다.
+\code{\link{get_president}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
 character를 입력으로 받습니다.}
 
 \item{field}{검색하고자 하는 분야를 지정합니다. 기본값은 전체를 검색합니다.
-\code{\link{get_options}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
+\code{\link{get_field}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
 character를 입력으로 받습니다.}
 
 \item{event}{검색하고자 하는 유형을 지정합니다. 기본값은 전체를 검색합니다.
-\code{\link{get_options}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
+\code{\link{get_event}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
 character를 입력으로 받습니다.}
 
 \item{order}{검색 결과의 순서를 정합니다. 기본값은 연설문일자순 입니다.
