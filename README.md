@@ -4,6 +4,7 @@
 [![CRAN status](https://www.r-pkg.org/badges/version/presidentSpeechKr)](https://cran.r-project.org/package=presidentSpeechKr)
 [![Coverage status](https://codecov.io/gh/forkonlp/presidentSpeechKr/branch/master/graph/badge.svg)](https://codecov.io/github/forkonlp/presidentSpeechKr?branch=master)
 [![Travis-CI Build Status](https://travis-ci.org/forkonlp/presidentSpeechKr.svg?branch=master)](https://travis-ci.org/forkonlp/presidentSpeechKr)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/forkonlp/presidentSpeechKr?branch=master&svg=true)](https://ci.appveyor.com/project/forkonlp/presidentSpeechKr)
 
 ## 3rd krdata project package!!!
 
