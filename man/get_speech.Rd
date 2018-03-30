@@ -4,14 +4,17 @@
 \alias{get_speech}
 \title{get speach}
 \usage{
-get_speech(target, paragraph = FALSE)
+get_speech(link, paragraph = FALSE)
 }
 \arguments{
-\item{paragraph}{문단 단위로 분리할지 말지를 정합니다. 기본값은 FALSE 입니다.
-logical 을 입력으로 받습니다.}
-
-\item{link}{검색어를 입력합니다. 기본값은 전체를 검색합니다.
+\item{link}{게시글의 url 주소입니다. 한 번에 한 주소만 가능합니다.
+\url{http://www.pa.go.kr/research/contents/speech/index.jsp?spMode=view&catid=c_pa02062&artid=1310475}
+와 같이 생겼습니다.
 character를 입력으로 받습니다.}
+
+\item{paragraph}{문단 단위로 분리할지 말지를 정합니다.
+기본값은 FALSE 입니다.
+logical 을 입력으로 받습니다.}
 }
 \value{
 tibble 자료형으로 key, value 의 2개 컬럼을 가집니다.

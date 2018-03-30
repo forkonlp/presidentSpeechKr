@@ -10,13 +10,11 @@ License: CC0
 Encoding: UTF-8
 LazyData: true
 Depends:
-    R (>= 2.10)
+    R (>= 3.1)
 Imports: 
+    xml2,
     rvest,
-    httr,
-    tibble,
-    dplyr,
-    purrr
+    tibble
 URL: http://github.com/mrchypark/presidentSpeechKr
 BugReports: https://github.com/mrchypark/presidentSpeechKr/issues
 RoxygenNote: 6.0.1

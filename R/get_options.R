@@ -9,38 +9,27 @@
 #'        이 category에, 관련 내용이 label에 있습니다.
 #'
 #' @export
-#' @importFrom dplyr %>%
-#' @importFrom dplyr filter
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_text
 #' @importFrom rvest html_attr
-#' @importFrom httr GET
-#' @importFrom httr content
+#' @importFrom xml2 read_html
 #' @importFrom tibble tibble
 
 get_options <- function() {
   tar <- "http://www.pa.go.kr/research/contents/speech/index.jsp"
   
-  hobj <-
-    tar %>%
-    httr::GET %>%
-    httr::content("parsed")
+  hobj <- xml2::read_html(tar)
+
+  category <- rvest::html_nodes(hobj, "ul.iList li label")
+  category <- rvest::html_text(category)
   
-  tar_list <-
-    hobj %>%
-    httr::html_nodes("ul.iList li label") %>%
-    httr::html_text
+  label <- rvest::html_nodes(hobj, "ul.iList li label")
+  label <- rvest::html_attr(label, "for")
   
-  tar_for <-
-    hobj %>%
-    httr::html_nodes("ul.iList li label") %>%
-    httr::html_attr("for")
+  res <- tibble(category, label)
   
-  res <- tibble(category = tar_for, label = tar_list)
-  res <-
-    res %>%
-    dplyr::filter(!grepl("[a-z]0", category)) %>%
-    dplyr::filter(!grepl("search", category)) %>%
+  res <- res[-grep("[a-z]0", res$category),]
+  res <- res[-grep("search", res$category),]
   
   res$category <- gsub("[0-9]", "", res$category)
   

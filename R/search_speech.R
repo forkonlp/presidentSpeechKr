@@ -33,12 +33,10 @@
 #' }
 #'
 #' @export
-#' @importFrom dplyr %>%
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_text
 #' @importFrom rvest html_attr
-#' @importFrom httr GET
-#' @importFrom httr content
+#' @importFrom xml2 read_html
 #' @importFrom tibble tibble
 
 search_speech <- function(keyword = "",
@@ -84,14 +82,10 @@ search_speech <- function(keyword = "",
   
   tar <- paste0(root, "?", params)
   
-  hobj <-
-    httr::GET(tar) %>%
-    httr::content("parsed")
+  hobj <- xml2::read_html(tar)
   
-  dat <-
-    hobj %>%
-    httr::html_nodes("td") %>%
-    httr::html_text
+  dat <- rvest::html_nodes(hobj, "td")
+  dat <- rvest::html_text(dat)
   
   if (length(dat) > 6) {
     damPst <- dat[seq(from = 2,
@@ -110,11 +104,8 @@ search_speech <- function(keyword = "",
                     to = length(dat),
                     by = 6)]
     
-    link <-
-      hobj %>%
-      httr::html_nodes("td.title a") %>%
-      httr::html_attr("href")
-    
+    link <- rvest::html_nodes(hobj, "td.title a")
+    link <- rvest::html_attr(link, "href")
     link <- paste0(root, link)
     
     res <- tibble(damPst, field, event, title, date, link)
