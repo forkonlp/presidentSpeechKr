@@ -14,5 +14,5 @@ tibble 자료형으로 category, label 컬럼으로 구성되어 있습니다.
 \description{
 \code{\link{search_speech}} 함수에서 사용할 조건들을 출력합니다.
 대통령, 분야, 유형에 대한 값들을 확인할 수 있습니다.
-인터넷을 사용한 기능입니다.
+인터넷을 사용하는 기능입니다.
 }

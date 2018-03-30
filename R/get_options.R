@@ -2,7 +2,7 @@
 #'
 #' \code{\link{search_speech}} 함수에서 사용할 조건들을 출력합니다.
 #' 대통령, 분야, 유형에 대한 값들을 확인할 수 있습니다.
-#' 인터넷을 사용한 기능입니다.
+#' 인터넷을 사용하는 기능입니다.
 #'
 #' @return tibble 자료형으로 category, label 컬럼으로 구성되어 있습니다.
 #'        패키지 제작일 기준으로 대통령:damPst, 분야:speechField, 유형:speechEvent
@@ -21,10 +21,10 @@ get_options <- function() {
   hobj <- xml2::read_html(tar)
 
   category <- rvest::html_nodes(hobj, "ul.iList li label")
-  category <- rvest::html_text(category)
+  category <- rvest::html_attr(category, "for")
   
   label <- rvest::html_nodes(hobj, "ul.iList li label")
-  label <- rvest::html_attr(label, "for")
+  label <- rvest::html_text(label)
   
   res <- tibble(category, label)
   
@@ -32,6 +32,7 @@ get_options <- function() {
   res <- res[-grep("search", res$category),]
   
   res$category <- gsub("[0-9]", "", res$category)
+  
   
   return(res)
 }
