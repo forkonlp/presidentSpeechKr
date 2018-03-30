@@ -65,7 +65,6 @@ get_field <- function(){
   res <- res[-grep("[a-z]0", res$category),]
   res <- res[grep("Field", res$category),]
   res <- res$label
-  res <- sapply(strsplit(res, " "), function(x) x[1])
   
   return(res)
 }
@@ -101,7 +100,6 @@ get_event <- function(){
   res <- res[-grep("[a-z]0", res$category),]
   res <- res[grep("Event", res$category),]
   res <- res$label
-  res <- sapply(strsplit(res, " "), function(x) x[1])
   
   return(res)
 }
