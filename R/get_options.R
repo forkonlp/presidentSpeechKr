@@ -9,7 +9,7 @@
 #'        이 category에, 관련 내용이 label에 있습니다.
 #'
 #' @export
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 #' @importFrom dplyr mutate
 #' @importFrom dplyr filter
 #' @importFrom rvest html_nodes

@@ -12,7 +12,7 @@
 #' @return tibble 자료형으로 key, value 의 2개 컬럼을 가집니다.
 #'
 #' @export
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_text
 #' @importFrom httr GET

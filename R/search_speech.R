@@ -33,7 +33,7 @@
 #' }
 #'
 #' @export
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_text
 #' @importFrom rvest html_attr
