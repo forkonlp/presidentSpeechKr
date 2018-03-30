@@ -13,7 +13,7 @@
 #'              numeric을 입력을 받습니다.
 #' @param damPst 검색하고자 하는 대통령을 지정합니다. 기본값은 전체를 검색합니다.
 #'                  \code{\link{get_options}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
-#'                  character를 입력으로 받습니다. 
+#'                  character를 입력으로 받습니다.
 #' @param field 검색하고자 하는 분야를 지정합니다. 기본값은 전체를 검색합니다.
 #'              \code{\link{get_options}} 함수로 검색 가능한 리스트를 확인할 수 있습니다.
 #'              character를 입력으로 받습니다.
@@ -42,36 +42,35 @@
 #' @importFrom tibble tibble
 
 search_speech <- function(keyword = "",
-                   searchField = 0,
-                   count = 90000,
-                   damPst = "",
-                   field = "",
-                   event = "",
-                   order = 1) {
-  
+                          searchField = 0,
+                          count = 90000,
+                          damPst = "",
+                          field = "",
+                          event = "",
+                          order = 1) {
   root <- "http://www.pa.go.kr/research/contents/speech/index.jsp"
   
-  params <- 
+  params <-
     paste0(
-    "spMode=",
-    "&artid=",
-    "&catid=",
-    "&orderColumn=",
-    order,
-    "&pageIndex=1",
-    "&searchHistoryCount=0",
-    "&damPst=",
-    damPst,
-    "&speechField=",
-    field,
-    "&speechEvent=",
-    event,
-    "&searchCondition=0",
-    "&searchKeyword=",
-    keyword,
-    "&pageUnit=",
-    count
-  )
+      "spMode=",
+      "&artid=",
+      "&catid=",
+      "&orderColumn=",
+      order,
+      "&pageIndex=1",
+      "&searchHistoryCount=0",
+      "&damPst=",
+      damPst,
+      "&speechField=",
+      field,
+      "&speechEvent=",
+      event,
+      "&searchCondition=0",
+      "&searchKeyword=",
+      keyword,
+      "&pageUnit=",
+      count
+    )
   
   res <-
     tibble(
@@ -96,8 +95,8 @@ search_speech <- function(keyword = "",
   
   if (length(dat) > 6) {
     damPst <- dat[seq(from = 2,
-                         to = length(dat),
-                         by = 6)]
+                      to = length(dat),
+                      by = 6)]
     field <- dat[seq(from = 3,
                      to = length(dat),
                      by = 6)]
