@@ -85,13 +85,13 @@ search_speech <- function(keyword = "",
   tar <- paste0(root, "?", params)
   
   hobj <-
-    GET(tar) %>%
-    content("parsed")
+    httr::GET(tar) %>%
+    httr::content("parsed")
   
   dat <-
     hobj %>%
-    html_nodes("td") %>%
-    html_text
+    httr::html_nodes("td") %>%
+    httr::html_text
   
   if (length(dat) > 6) {
     damPst <- dat[seq(from = 2,
@@ -112,8 +112,8 @@ search_speech <- function(keyword = "",
     
     link <-
       hobj %>%
-      html_nodes("td.title a") %>%
-      html_attr("href")
+      httr::html_nodes("td.title a") %>%
+      httr::html_attr("href")
     
     link <- paste0(root, link)
     

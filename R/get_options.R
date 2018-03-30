@@ -24,25 +24,25 @@ get_options <- function() {
   
   hobj <-
     tar %>%
-    GET %>%
-    content("parsed")
+    httr::GET %>%
+    httr::content("parsed")
   
   tar_list <-
     hobj %>%
-    html_nodes("ul.iList li label") %>%
-    html_text
+    httr::html_nodes("ul.iList li label") %>%
+    httr::html_text
   
   tar_for <-
     hobj %>%
-    html_nodes("ul.iList li label") %>%
-    html_attr("for")
+    httr::html_nodes("ul.iList li label") %>%
+    httr::html_attr("for")
   
   res <- tibble(category = tar_for, label = tar_list)
   res <-
     res %>%
-    filter(!grepl("[a-z]0", category)) %>%
-    filter(!grepl("search", category)) %>%
-    mutate(category = gsub("[0-9]", "", category))
+    dplyr::filter(!grepl("[a-z]0", category)) %>%
+    dplyr::filter(!grepl("search", category)) %>%
+    dplyr::mutate(category = gsub("[0-9]", "", category))
   
   return(res)
 }
