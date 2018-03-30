@@ -3,6 +3,8 @@
 export(get_options)
 export(get_speech)
 export(search_speech)
+importFrom(dplyr,filter)
+importFrom(dplyr,mutate)
 importFrom(httr,GET)
 importFrom(httr,content)
 importFrom(magrittr,"%>%")

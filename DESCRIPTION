@@ -19,7 +19,6 @@ Remotes:
     tidyverse/dplyr,
     tidyverse/purrr,
     tidyverse/magrittr
-    
 URL: http://github.com/mrchypark/presidentSpeechKr
 BugReports: https://github.com/mrchypark/presidentSpeechKr/issues
 RoxygenNote: 6.0.1

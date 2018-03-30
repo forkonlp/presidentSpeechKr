@@ -10,6 +10,8 @@
 #'
 #' @export
 #' @importFrom magrittr %>%
+#' @importFrom dplyr mutate
+#' @importFrom dplyr filter
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_text
 #' @importFrom rvest html_attr
