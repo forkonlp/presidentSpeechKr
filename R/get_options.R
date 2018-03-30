@@ -27,6 +27,7 @@ get_options <- function() {
   label <- rvest::html_text(label)
   
   res <- tibble(category, label)
+  print(res)
   
   res <- res[-grep("[a-z]0", res$category),]
   res <- res[-grep("search", res$category),]
