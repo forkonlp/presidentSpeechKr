@@ -29,8 +29,8 @@ get_speech <- function(link, paragraph = FALSE) {
   meta_data <- rvest::html_nodes(hobj, "div.viewItem dl dd")
   meta_data <- rvest::html_text(meta_data)
   
-  body <- html_nodes(hobj, "div.conTxt")
-  body <- gsub(pattern = '<.*?>', replacement = '\t', hobj)
+  body <- rvest::html_nodes(hobj, "div.conTxt")
+  body <- gsub(pattern = '<.*?>', replacement = '\t', body)
   body <- strsplit(body, '\t')
   
   body <- trimws(body[[1]])
