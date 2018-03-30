@@ -78,18 +78,49 @@
     <div id="presidentspeechkr" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#presidentspeechkr" class="anchor"></a>presidentSpeechKr</h1></div>
+
 <div id="rd-krdata-project-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#rd-krdata-project-package" class="anchor"></a>3rd krdata project package!!!</h2>
-
 <p>대통령 기록 연구실의 <a href="http://www.pa.go.kr/research/contents/speech/index.jsp">연설기록</a> 페이지에서 연설문을 가져옵니다.</p>
 </div>
-<div id="installation" class="section level2">
+<div id="-installation" class="section level2">
 <h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>installation</h2>
-<pre><code>source("https://install-github.me/forkonlp/presidentSpeechKr")
-library(presidentSpeechKr)
-</code></pre>
+<a href="#-installation" class="anchor"></a>설치 Installation</h2>
+<p><a href="https://github.com/">GitHub</a>에서 설치할 수 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("devtools")</span>
+devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"forkonlp/presidentSpeechKr"</span>)</code></pre></div>
+</div>
+<div id="-help" class="section level2">
+<h2 class="hasAnchor">
+<a href="#-help" class="anchor"></a>설명문서 help</h2>
+<p><code>?함수이름</code>이나 <code>help(함수이름)</code>을 사용하시면 함수의 설명을 볼 수 있습니다. 본 패키지는 <strong>한글</strong>로 설명 문서를 작성하였습니다.</p>
+</div>
+<div id="-example" class="section level2">
+<h2 class="hasAnchor">
+<a href="#-example" class="anchor"></a>예제 Example</h2>
+<p>2개의 speech에 대한 함수와 3개의 검색 조건에 대한 함수로 이루어져 있습니다.</p>
+<div id="speech---" class="section level3">
+<h3 class="hasAnchor">
+<a href="#speech---" class="anchor"></a>speech 에 대한 함수</h3>
+<p>처음 함수는 speech를 검색하는 함수입니다. <code>library(presidentSpeechKr)</code>를 이용해 패키지를 로드해야 사용할 수 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/search_speech.html">search_speech</a></span>(<span class="dt">count=</span><span class="dv">20</span>)</code></pre></div>
+<p>두 번째는 speech text를 가져오는 함수입니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/get_speech.html">get_speech</a></span>(<span class="st">"http://www.pa.go.kr/research/contents/speech/index.jsp?spMode=view&amp;catid=c_pa02062&amp;artid=1308580"</span>)</code></pre></div>
+</div>
+<div id="---" class="section level3">
+<h3 class="hasAnchor">
+<a href="#---" class="anchor"></a>검색 조건에 대한 함수</h3>
+<p><code><a href="reference/search_speech.html">search_speech()</a></code> 함수의 인자 중에 president, field, event에서 사용할 조건을 출력해줍니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 대통령 리스트 출력</span>
+<span class="kw"><a href="reference/get_president.html">get_president</a></span>()
+
+<span class="co"># 분야 리스트 출력</span>
+<span class="kw"><a href="reference/get_field.html">get_field</a></span>()
+
+<span class="co"># 유형 리스트 출력</span>
+<span class="kw"><a href="reference/get_event.html">get_event</a></span>()</code></pre></div>
+</div>
 </div>
 </div>
   </div>
@@ -120,6 +151,9 @@ library(presidentSpeechKr)
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
+<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="lifecycle"></a></li>
+<li><a href="https://cran.r-project.org/package=presidentSpeechKr"><img src="https://www.r-pkg.org/badges/version/presidentSpeechKr" alt="CRAN status"></a></li>
+<li><a href="https://codecov.io/github/forkonlp/presidentSpeechKr?branch=master"><img src="https://codecov.io/gh/forkonlp/presidentSpeechKr/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
 <li><a href="https://travis-ci.org/forkonlp/presidentSpeechKr"><img src="https://travis-ci.org/forkonlp/presidentSpeechKr.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 </ul>
 </div>

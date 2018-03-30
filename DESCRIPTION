@@ -18,3 +18,6 @@ Imports:
 URL: http://github.com/forkonlp/presidentSpeechKr
 BugReports: https://github.com/forkonlp/presidentSpeechKr/issues
 RoxygenNote: 6.0.1
+Suggests: 
+    covr,
+    testthat
