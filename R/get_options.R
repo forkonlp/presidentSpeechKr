@@ -10,7 +10,6 @@
 #'
 #' @export
 #' @importFrom dplyr %>%
-#' @importFrom dplyr mutate
 #' @importFrom dplyr filter
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_text
@@ -42,7 +41,8 @@ get_options <- function() {
     res %>%
     dplyr::filter(!grepl("[a-z]0", category)) %>%
     dplyr::filter(!grepl("search", category)) %>%
-    dplyr::mutate(category = gsub("[0-9]", "", category))
+  
+  res$category <- gsub("[0-9]", "", res$category)
   
   return(res)
 }
