@@ -2,7 +2,7 @@
 % Please edit documentation in R/search_speech.R
 \name{search_speech}
 \alias{search_speech}
-\title{대통령 연설문 검색}
+\title{search speech}
 \usage{
 search_speech(keyword = "", searchField = 0, count = 90000, damPst = "",
   field = "", event = "", order = 1)
@@ -40,13 +40,13 @@ numeric을 입력을 받습니다.}
 }
 \description{
 대통력 연설문을 검색합니다. 대통령 기록 연구실
-\url{http://www.pa.go.kr/research/contents/speech/index.jsp}의 검색 기능을
+\href{http://www.pa.go.kr/research/contents/speech/index.jsp}{대통령 기록 연구실}의 검색 기능을
 이용합니다. 제공하는 url 또한 대통령 기록 연구실의 url을 사용합니다.
 }
 \examples{
 \dontrun{
-plist <- search(count = 20)
-plist
+splist <- search_speech(count = 20)
+splist
 }
 
 }

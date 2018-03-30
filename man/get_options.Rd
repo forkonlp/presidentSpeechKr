@@ -2,13 +2,14 @@
 % Please edit documentation in R/get_options.R
 \name{get_options}
 \alias{get_options}
-\title{검색 조건 확인}
+\title{get search options}
 \usage{
 get_options()
 }
 \value{
 tibble 자료형으로 category, label 컬럼으로 구성되어 있습니다.
-       \run{Sys.Date()} 기준으로
+       패키지 제작일 기준으로 대통령:damPst, 분야:speechField, 유형:speechEvent
+       이 category에, 관련 내용이 label에 있습니다.
 }
 \description{
 \code{\link{search_speech}} 함수에서 사용할 조건들을 출력합니다. 

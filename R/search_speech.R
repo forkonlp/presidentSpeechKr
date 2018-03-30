@@ -36,6 +36,7 @@
 #' @importFrom magrittr %>%
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_text
+#' @importFrom rvest html_attr
 #' @importFrom httr GET
 #' @importFrom httr content
 #' @importFrom tibble tibble
