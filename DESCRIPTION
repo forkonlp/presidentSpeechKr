@@ -11,10 +11,13 @@ Encoding: UTF-8
 LazyData: true
 Depends:
     R (>= 2.10)
-Imports:
-    tibble
-Suggests:
-    dplyr
+Imports: 
+    tibble,
+    dplyr,
+    rvest,
+    httr,
+    magrittr,
+    purrr
 URL: http://github.com/mrchypark/presidentSpeechKr
 BugReports: https://github.com/mrchypark/presidentSpeechKr/issues
 RoxygenNote: 6.0.1
