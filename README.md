@@ -8,6 +8,8 @@
 
 ## 3rd krdata project package!!!
 
+<https://forkonlp.github.io/presidentSpeechKr/>
+
 대통령 기록 연구실의 [연설기록][연설기록] 페이지에서 연설문을 가져옵니다.
 
 ## 설치 Installation
