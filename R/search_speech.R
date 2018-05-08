@@ -1,6 +1,6 @@
 #' search speech
 #'
-#' 대통력 연설문을 검색합니다. 대통령 기록 연구실
+#' 대통력 연설문을 검색합니다.
 #' \href{http://www.pa.go.kr/research/contents/speech/index.jsp}{대통령 기록 연구실}의 검색 기능을
 #' 이용합니다. 제공하는 url 또한 대통령 기록 연구실의 url을 사용합니다.
 #'
@@ -41,7 +41,7 @@
 
 search_speech <- function(keyword = "",
                           searchField = 0,
-                          count = 90000,
+                          count = 10000,
                           president = "",
                           field = "",
                           event = "",
@@ -57,7 +57,7 @@ search_speech <- function(keyword = "",
       order,
       "&pageIndex=1",
       "&searchHistoryCount=0",
-      "&president=",
+      "&damPst=",
       president,
       "&speechField=",
       field,
@@ -89,8 +89,8 @@ search_speech <- function(keyword = "",
   
   if (length(dat) > 6) {
     president <- dat[seq(from = 2,
-                      to = length(dat),
-                      by = 6)]
+                         to = length(dat),
+                         by = 6)]
     field <- dat[seq(from = 3,
                      to = length(dat),
                      by = 6)]

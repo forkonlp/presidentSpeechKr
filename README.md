@@ -58,5 +58,18 @@ get_field()
 get_event()
 ```
 
+### windows에서 R code execution error 발생시
+
+도움말을 한글로 작성하면서 windows 환경에서 아래 에러가 발생하는는 것을 확인했습니다.
+
+```
+(Window Title) Error Retrieving Help 
+(Message) R code execution error
+```
+
+일본어에서도 [같은 문제][같은문제]가 발생하는 것을 확인했습니다.
+코드의 자동완성기능에서 생기는 버그로 무시하시거나 Tools > Global Options > Code > Completion 에서 R and C/C++ 부분을 Automatically에서 Manually(Tab)으로 바꾸시기 바랍니다.
+`help(함수이름)`으로 확인하는 help 창은 문제없이 동작합니다.
 
 [연설기록]: http://www.pa.go.kr/research/contents/speech/index.jsp
+[같은문제]: https://ja.stackoverflow.com/questions/24083/rstudio%E3%81%A7%E3%81%AErmecab%E3%81%AE%E8%B5%B7%E5%8B%95%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8

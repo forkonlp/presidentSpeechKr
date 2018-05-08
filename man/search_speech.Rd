@@ -4,7 +4,7 @@
 \alias{search_speech}
 \title{search speech}
 \usage{
-search_speech(keyword = "", searchField = 0, count = 90000,
+search_speech(keyword = "", searchField = 0, count = 10000,
   president = "", field = "", event = "", order = 1)
 }
 \arguments{
@@ -39,7 +39,7 @@ numeric을 입력을 받습니다.}
         president, field, event, title, date, link의 컬럼 이름으로 출력합니다.
 }
 \description{
-대통력 연설문을 검색합니다. 대통령 기록 연구실
+대통력 연설문을 검색합니다.
 \href{http://www.pa.go.kr/research/contents/speech/index.jsp}{대통령 기록 연구실}의 검색 기능을
 이용합니다. 제공하는 url 또한 대통령 기록 연구실의 url을 사용합니다.
 }

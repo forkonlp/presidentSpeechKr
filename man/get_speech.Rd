@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_speech.R
 \name{get_speech}
 \alias{get_speech}
-\title{get speach}
+\title{get speech}
 \usage{
 get_speech(link, paragraph = FALSE)
 }
@@ -17,7 +17,7 @@ character를 입력으로 받습니다.}
 logical 을 입력으로 받습니다.}
 }
 \value{
-tibble 자료형으로 key, value 의 2개 컬럼을 가집니다.
+tibble 자료형으로 title, date, president, place, field, event, source, paragraph, content의 9개 컬럼을 가집니다.
 }
 \description{
 \code{\link{search_speech}}에서 얻은 주소:link를 기준으로 연설문을 가져옵니다.
