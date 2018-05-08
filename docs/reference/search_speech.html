@@ -25,9 +25,12 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="search speech — search_speech" />
 
-<meta property="og:description" content="대통력 연설문을 검색합니다. 대통령 기록 연구실
+<meta property="og:description" content="대통력 연설문을 검색합니다.
 대통령 기록 연구실의 검색 기능을
 이용합니다. 제공하는 url 또한 대통령 기록 연구실의 url을 사용합니다." />
 <meta name="twitter:card" content="summary" />
@@ -42,19 +45,15 @@
 <![endif]-->
 
 
-<!-- Google analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47822682-14"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  ga('create', 'UA-47822682-14', 'auto');
-  ga('send', 'pageview');
-
+  gtag('config', 'UA-47822682-14');
 </script>
-
-
 
   </head>
 
@@ -71,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">presidentSpeechKr</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.1</span>
       </span>
     </div>
 
@@ -111,16 +110,19 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>search speech</h1>
-    <small>Source: <a href='http://github.com/forkonlp/presidentSpeechKr/blob/master/R/search_speech.R'><code>R/search_speech.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/forkonlp/presidentSpeechKr/blob/master/R/search_speech.R'><code>R/search_speech.R</code></a></small>
+    <div class="hidden name"><code>search_speech.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
-    <p>대통력 연설문을 검색합니다. 대통령 기록 연구실
+    <p>대통력 연설문을 검색합니다.
 <a href='http://www.pa.go.kr/research/contents/speech/index.jsp'>대통령 기록 연구실</a>의 검색 기능을
 이용합니다. 제공하는 url 또한 대통령 기록 연구실의 url을 사용합니다.</p>
     
+    </div>
 
-    <pre class="usage"><span class='fu'>search_speech</span>(<span class='kw'>keyword</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>searchField</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>90000</span>,
+    <pre class="usage"><span class='fu'>search_speech</span>(<span class='kw'>keyword</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>searchField</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
   <span class='kw'>president</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>field</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>event</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>order</span> <span class='kw'>=</span> <span class='fl'>1</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>

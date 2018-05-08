@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://forkonlp.github.io/presidentSpeechKr/index.html</loc>
+  </url>
+  <url>
+    <loc>http://forkonlp.github.io/presidentSpeechKr/reference/get_event.html</loc>
+  </url>
+  <url>
+    <loc>http://forkonlp.github.io/presidentSpeechKr/reference/get_field.html</loc>
+  </url>
+  <url>
+    <loc>http://forkonlp.github.io/presidentSpeechKr/reference/get_president.html</loc>
+  </url>
+  <url>
+    <loc>http://forkonlp.github.io/presidentSpeechKr/reference/get_speech.html</loc>
+  </url>
+  <url>
+    <loc>http://forkonlp.github.io/presidentSpeechKr/reference/search_speech.html</loc>
+  </url>
+</urlset>
