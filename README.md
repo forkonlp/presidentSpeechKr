@@ -17,8 +17,7 @@
 [GitHub](https://github.com/)에서 설치할 수 있습니다.
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("forkonlp/presidentSpeechKr")
+source("https://install-github.me/forkonlp/presidentSpeechKr")
 ```
 
 ## 설명문서 help
