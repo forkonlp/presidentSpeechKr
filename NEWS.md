@@ -1,3 +1,7 @@
+# presidentSpeechKr 0.2.0
+
+* `spidx` 데이터를 추가하였습니다. `spidx` 데이터의 `link` 컬럼을 이용해서 바로 `get_speech()`함수를 사용할 수 있습니다.
+
 # presidentSpeechKr 0.1.1
 
 * `search_speech()` 함수에서 대통령 조건이 동작하지 않는 문제를 해결하였습니다.

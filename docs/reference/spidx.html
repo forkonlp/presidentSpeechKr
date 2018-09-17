@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>get search options for president — get_president • presidentSpeechKr</title>
+<title>speech index data — spidx • presidentSpeechKr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,11 +30,9 @@
 
 
 
-<meta property="og:title" content="get search options for president — get_president" />
+<meta property="og:title" content="speech index data — spidx" />
 
-<meta property="og:description" content="search_speech 함수에서 사용할 president 조건을 출력합니다.
-대통령에 대한 값들을 확인할 수 있습니다.
-인터넷을 사용하는 기능입니다." />
+<meta property="og:description" content="speech index data" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -113,33 +111,61 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>get search options for president</h1>
-    <small class="dont-index">Source: <a href='https://github.com/forkonlp/presidentSpeechKr/blob/master/R/get_options.R'><code>R/get_options.R</code></a></small>
-    <div class="hidden name"><code>get_president.Rd</code></div>
+    <h1>speech index data</h1>
+    <small class="dont-index">Source: <a href='https://github.com/forkonlp/presidentSpeechKr/blob/master/R/spidx.R'><code>R/spidx.R</code></a></small>
+    <div class="hidden name"><code>spidx.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p><code><a href='search_speech.html'>search_speech</a></code> 함수에서 사용할 president 조건을 출력합니다.
-대통령에 대한 값들을 확인할 수 있습니다.
-인터넷을 사용하는 기능입니다.</p>
+    <p>speech index data</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>get_president</span>()</pre>
+    <pre class="usage"><span class='no'>spidx</span></pre>
         
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>character vector로 역대 대통령:president을 확인합니다.</p>
+    <p>tibble with columns</p><dl class='dl-horizontal'>
+<dt>president</dt><dd><p>대통령</p></dd>
+<dt>field</dt><dd><p>분야</p></dd>
+<dt>event</dt><dd><p>유형</p></dd>
+<dt>title</dt><dd><p>연설문 제목</p></dd>
+<dt>date</dt><dd><p>날짜</p></dd>
+<dt>link</dt><dd><p>연설문 링크</p></dd>
+</dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>http://www.pa.go.kr/research/contents/speech/index.jsp</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>  <span class='no'>spidx</span></div><div class='output co'>#&gt; [90m# A tibble: 6,681 x 6[39m
+#&gt;    president field  event   title                 date   link                  
+#&gt;    [3m[90m&lt;chr&gt;[39m[23m     [3m[90m&lt;chr&gt;[39m[23m  [3m[90m&lt;chr&gt;[39m[23m   [3m[90m&lt;chr&gt;[39m[23m                 [3m[90m&lt;chr&gt;[39m[23m  [3m[90m&lt;chr&gt;[39m[23m                 
+#&gt; [90m 1[39m 이승만    기타   성명/담화문~ 학생제군에게          1948   http://www.pa.go.kr/r~
+#&gt; [90m 2[39m 이승만    국정전반~ 취임사  [90m"[39m대통령 취임사(大統領就任辭) [90m"[39m~ 1948.~ http://www.pa.go.kr/r~
+#&gt; [90m 3[39m 이승만    정치/사회~ 성명/담화문~ [90m"[39m민족이 원하는 길을 따를 결심, 국~ 1948.~ http://www.pa.go.kr/r~
+#&gt; [90m 4[39m 이승만    국정전반~ 기타    [90m"[39m미급점(未及點) 육성하라 [90m"[39m~ 1948.~ http://www.pa.go.kr/r~
+#&gt; [90m 5[39m 이승만    정치/사회~ 성명/담화문~ [90m"[39m전민족에게 충고함 [90m"[39m  1948.~ http://www.pa.go.kr/r~
+#&gt; [90m 6[39m 이승만    정치/사회~ 성명/담화문~ [90m"[39m대한민국 정부수립과 우리의 각오 [90m"[0m~ 1948.~ http://www.pa.go.kr/r~
+#&gt; [90m 7[39m 이승만    국정전반~ 기념사  [90m"[39m함께 뭉쳐서 자강전진(自疆前進) 외~ 1948.~ http://www.pa.go.kr/r~
+#&gt; [90m 8[39m 이승만    정치/사회~ 성명/담화문~ [90m"[39m정권 이양문제에 대하여 [90m"[39m~ 1948.~ http://www.pa.go.kr/r~
+#&gt; [90m 9[39m 이승만    정치/사회~ 성명/담화문~ [90m"[39m북한정권(北韓政權)에 대하여 [90m"[39m~ 1948.~ http://www.pa.go.kr/r~
+#&gt; [90m10[39m 이승만    정치/사회~ 성명/담화문~ [90m"[39m미소(美蘇) 양군 철퇴문제에 대하여~ 1948.~ http://www.pa.go.kr/r~
+#&gt; [90m# ... with 6,671 more rows[39m</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
-      <li><a href="#value">Value</a></li>
-          </ul>
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
