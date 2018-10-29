@@ -1,3 +1,7 @@
+# presidentSpeechKr 0.2.1
+
+* `get_speech()` 함수의 `paragraph` 인자 사용시 공백 문자만 있는 줄이 발생하는 문제를 해결하였습니다.
+
 # presidentSpeechKr 0.2.0
 
 * `spidx` 데이터를 추가하였습니다. `spidx` 데이터의 `link` 컬럼을 이용해서 바로 `get_speech()`함수를 사용할 수 있습니다.

@@ -39,7 +39,9 @@ get_speech <- function(link, paragraph = FALSE) {
   content <- strsplit(content, '\t')
   
   content <- trimws(content[[1]])
+  content <- gsub("^[[:blank:]]$", "", content)
   content <- content[nchar(content) > 0]
+  
   
   if (!paragraph) {
     content <- paste0(content , collapse = " ")

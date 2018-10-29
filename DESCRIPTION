@@ -1,10 +1,12 @@
 Package: presidentSpeechKr
 Type: Package
 Title: Korean President's Speech Text
-Version: 0.2.0
-Authors@R: c(
-    person("ChanYub", "Park", , "mrchypark@gmail.com", c("aut", "cre"))
-    )
+Version: 0.2.1
+Authors@R: person(given = "Chanyub",
+             family = "Park",
+             role = c("aut","cre"),
+             email = "mrchypark@gmail.com",
+             comment = c(ORCID = "0000-0001-6474-2570"))
 Description: Korean president's speech text data from http://www.pa.go.kr/research/contents/speech/index.jsp.
 License: CC0
 Encoding: UTF-8
