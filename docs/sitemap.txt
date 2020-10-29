@@ -1,5 +1,0 @@
-http://forkonlp.github.io/presidentSpeechKr/reference/get_event.html
-http://forkonlp.github.io/presidentSpeechKr/reference/get_field.html
-http://forkonlp.github.io/presidentSpeechKr/reference/get_president.html
-http://forkonlp.github.io/presidentSpeechKr/reference/get_speech.html
-http://forkonlp.github.io/presidentSpeechKr/reference/search_speech.html
