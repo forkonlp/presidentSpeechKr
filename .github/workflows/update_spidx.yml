@@ -1,0 +1,32 @@
+on:
+  schedule:
+    - cron: '* * * * *'
+
+name: Update spdix
+
+jobs:
+  render:
+    name: Update spdix
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install usethis, remotes, and the local package
+        run: |
+          install.packages("remotes")
+          remotes::install_local(".")
+          remotes::install_cran("usethis")
+        shell: Rscript {0}
+      - name: Update spdix
+        run: |
+          library(presidentSpeechKr)
+          spidx <- search_speech()
+          usethis::use_data(spidx, overwrite = TRUE)
+        shell: Rscript {0}
+      - name: Commit results
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git commit data/spidx.rda -m 'update spidx!' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
