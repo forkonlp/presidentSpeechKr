@@ -3,6 +3,13 @@
 
 # presidentSpeechKr
 
+# 관리하지 않습니다!
+# !![presidentSpeech][presidentSpeech] 를 사용해주세요!!
+
+[presidentSpeech][presidentSpeech]
+
+[presidentSpeech]: https://github.com/forkonlp/presidentSpeech
+
 <!-- badges: start -->
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
